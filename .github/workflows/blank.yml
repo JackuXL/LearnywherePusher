@@ -32,8 +32,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests
           
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
+      - name: Run script
+        env:
+          UID: ${{ secrets.UID }}
+          TOKEN: ${{ secrets.TOKEN }}
+          SID: ${{ secrets.SID }}
+          SEASON: ${{ secrets.SEASON }}
+        run: python LearnywherePusher/main.py
           
           
