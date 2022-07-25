@@ -38,6 +38,6 @@ jobs:
           TOKEN: ${{ secrets.TOKEN }}
           SID: ${{ secrets.SID }}
           SEASON: ${{ secrets.SEASON }}
-        run: python LearnywherePusher/main.py
+        run: python main.py
           
           
